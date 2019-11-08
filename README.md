@@ -1,7 +1,7 @@
 # forumslader-enhancements
 Some modifications I'm making to my Forumslader rectifier for bicycle dynamos
 
-Upgrades to forumslader controller- esp, see hans & sven's email- 
+Upgrades to forumslader controller
 
 # Ideas
 - Blinkenlights
