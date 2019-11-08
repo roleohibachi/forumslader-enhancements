@@ -8,7 +8,7 @@ Upgrades to forumslader controller
   - 12v light output should have a blink option
   - spec and buy MOSFET
   - write code to control mosfet from GPIO
-  - see low power circuit ([attached](circuit-20191025-1530.circuitjs.txt), load into script from https://www.falstad.com/circuit/circuitjs.html)
+  - see low power circuit ([attached](circuit-20191025-1530.circuitjs.txt), or just [click here](https://www.falstad.com/circuit/circuitjs.html?cct=$+1+0.000005+10.20027730826997+50+5+43%0Ar+176+80+384+80+0+10%0As+384+80+448+80+0+1+false%0Aw+176+80+176+352+0%0Ac+384+352+176+352+0+0.000015+7.517862267821689%0Al+384+80+384+352+0+1+0.012934119753820842%0Av+448+352+448+80+0+0+40+5+0+0+0.5%0Ar+384+352+448+352+0+100%0Ao+4+64+0+4099+20+0.05+0+2+4+3%0Ao+3+64+0+4099+20+0.05+1+2+3+3%0Ao+0+64+0+4099+0.625+0.05+2+2+0+3%0A38+3+0+0.000001+0.000101+Capacitance%0A38+4+0+0.01+1.01+Inductance%0A38+0+0+1+101+Resistance%0Ah+1+4+3%0A)
 - CSCS GATT profile, to allow Strava, etc to receive high quality speed data via BT
 - May be used to power (and control?) Electronic shifting project
 - upgrade to marine grade cables & connectors
