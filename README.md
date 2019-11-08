@@ -16,7 +16,7 @@ Upgrades to forumslader controller
 
 # BT Serial protocol info
 - uses bluetooth uart protocol
-- protocol info attached and [here](http://www.forumslader.de/fileadmin/user_upload/Individuelle Geraete/jensd/Download/FL-Ahead/4-fach/Manuals/Datensaetze-BT-Modul.pdf)
+- protocol info [attached](FLV5_Protocol_En.md) and [here](http://www.forumslader.de/fileadmin/user_upload/Individuelle Geraete/jensd/Download/FL-Ahead/4-fach/Manuals/Datensaetze-BT-Modul.pdf)
 - [sample datagrams and device emulator](https://github.com/juergenalbert/ForumsladerSimulator/blob/master/app/src/main/java/de/example/forumsladersimulator/gattserver/GattServerActivity.java)
 - What is this "forumslader companion" app from the same author? Does it decode? https://github.com/juergenalbert/ForumsladerCompanion
 - other gatt protocols that could be useful:
