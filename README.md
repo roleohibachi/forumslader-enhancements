@@ -8,7 +8,7 @@ Upgrades to forumslader controller
   - 12v light output should have a blink option
   - spec and buy MOSFET
   - write code to control mosfet from GPIO
-  - see low power circuit (attached, load into script from https://www.falstad.com/circuit/circuitjs.html)
+  - see low power circuit ([attached](circuit-20191025-1530.circuitjs.txt), load into script from https://www.falstad.com/circuit/circuitjs.html)
 - CSCS GATT profile, to allow Strava, etc to receive high quality speed data via BT
 - May be used to power (and control?) Electronic shifting project
 - upgrade to marine grade cables & connectors
@@ -31,4 +31,5 @@ According to Sven:
 > - the dataformat is describe in the document in this email
 > - all datas are messured by the main board
 > - the BT modul only transmit / receive datas from the smartphone
+> 
 > I found my [code](Forumslader_ESP32_BLE_UART.ino) approach for Espressif's ESP32 module to emulate the HM-10. I tested it a year ago and it worked. I hope that simplifies the implementation for you.
