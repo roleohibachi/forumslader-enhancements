@@ -2,19 +2,24 @@ ForumsladerV5 – Übertragungsprotokoll
 Für den Forumslader ab der Version 5 kann ein Bluetoothmodul „huckepack“ auf der
 Laderplatine montiert werden. Gegenüber den vorherigen Versionen mit abgesetztem
 BT-Modul ergibt sich ein wesentlich kompakterer Aufbau.
+
 Durch den Einsatz eines spezialisierten Ladecontrollers im Forumslader V5 stehen
 außerdem erweiterte Möglichkeiten des Lademanagements zur Verfügung. Somit
 können durch ein überarbeitetes Übertragungsprotokoll wesentlich mehr Parameter
 gegenüber den vorherigen Versionen über das Lade- und Entladeverhalten sowie den
 Akkuzustand übertragen werden. Die Funktionalität des integrierten
 Fahrradcomputers ist auch in einigen Details weiterentwickelt und verbessert worden.
+
 Dieser sammelt, berechnet und speichert wie bisher autark alle relevanten Tourdaten.
+
 Sämtliche Informationen werden in Datensätze im ASCII Format verpackt und
 drahtlos mit der BT Version V2.1 über das Protokoll SPP (Serial Port Profile) an die
 „Forumslader App“ für Android übermittelt.
+
 In Vorbereitung einer Übertragung mittels BT Version V4.0 über BLE sind die
 Datensätze des Forumsladers mit zusätzlichen Prüfsummen versehen. Diese werden
 nach dem Standard für NMEA Datensätze gebildet.
+
 (checksum calculator z.B.: www.hhhh.org/wiml/proj/nmeaxor.html )
 
 Stand: 16.03.2016 Sven During © 2013-2016
@@ -50,54 +55,56 @@ Ausgewählte Details:
 
 FL5.P1 → 24bit
 
-  0  | cell1 ballance
-  1  | cell2 ballance
-  2  | cell3 ballance
-  3  | shortCircuit
-  4  | dischargingOvercurrent
-  5  | chargingOvercurrent
-  6  | dischargingHighcurrent
-  7  | chargingHighcurrent
-  8  | overloadpowerreduce
-  9  | overload
-  10 | inDUVR
-  11 | chargingProhibited
-  12 | dischargingProhibited
-  13 | fullDisChargedMarker
-  14 | remainingCapacityAccurate
-  15 | discharge
-  16 | criticalConditionDetected
-  17 | cellTemperatureTooLow
-  18 | cellTemperatureTooHigh
-  19 | voltageTooHigh
-  20 | voltageTooLow
-  21 | reoccuringChargeProtection
-  22 | checksumFailure
-  23 | systemInterrupt
-  
+|    |                            |
+| -- | -------------------------- |
+| 0  | cell1 ballance             |
+| 1  | cell2 ballance             |
+| 2  | cell3 ballance             |
+| 3  | shortCircuit               |
+| 4  | dischargingOvercurrent     |
+| 5  | chargingOvercurrent        |
+| 6  | dischargingHighcurrent     |
+| 7  | chargingHighcurrent        |
+| 8  | overloadpowerreduce        |
+| 9  | overload                   |
+| 10 | inDUVR                     |
+| 11 | chargingProhibited         |
+| 12 | dischargingProhibited      |
+| 13 | fullDisChargedMarker       |
+| 14 | remainingCapacityAccurate  |
+| 15 | discharge                  |
+| 16 | criticalConditionDetected  |
+| 17 | cellTemperatureTooLow      |
+| 18 | cellTemperatureTooHigh     |
+| 19 | voltageTooHigh             |
+| 20 | voltageTooLow              |
+| 21 | reoccuringChargeProtection |
+| 22 | checksumFailure            |
+| 23 | systemInterrupt            |
+
 FL5.P3
 
   //Geschwindigkeit berechnen
 
-  Speed = (FL5.P3/POLES*WHEELSIZE)/277.777;
+  Speed = `(FL5.P3/POLES*WHEELSIZE)/277.777;`
 
 FL5.P13
 
   //Gesamtkilometer berechnen
 
-  double factor =0.004096*(WHEELSIZE/POLES);
-
-  DISTTOTAL = FL5.P13 * factor + DISTTOTALOFFSET;
+  `double factor =0.004096*(WHEELSIZE/POLES);`
+  `DISTTOTAL = FL5.P13 * factor + DISTTOTALOFFSET;`
 
 Datensatz FLB
 
 (FL->App; Takt 2s)
 
-|$FLB |            |           |                        |
-| P1  | Temperatur | "240"     | in 1/10 °C -> 24.0°C   |
-| P2  | Luftdruck  | "1022772" | in Pa                  |
-| P3  | Höhe       | "735"     | in 1/10 Meter -> 73.5m |
-| P4  | Steigung   | "0"       | in 1/10 % -> 0.0%      |
+| $FLB |            |           |                        |
+| ---- | ---------- | --------- | ---------------------- |
+| P1   | Temperatur | "240"     | in 1/10 °C -> 24.0°C   |
+| P2   | Luftdruck  | "1022772" | in Pa                  |
+| P3   | Höhe       | "735"     | in 1/10 Meter -> 73.5m |
+| P4   | Steigung   | "0"       | in 1/10 % -> 0.0%      |
 
 Beispiel:
 
@@ -111,6 +118,7 @@ Datensatz FLC
 
 
 | $FLC |       |                               |                      |                     |                 |                |                          |
+| ---- | ----- | ----------------------------- | -------------------- | ------------------- | --------------- | -------------- | ------------------------ |
 | P1   | Satz  | 0                             | 1                    | 2                   | 3               | 4              | 5 (ab Version FL5)       |
 | P2   | Value | Tour Höhenmeter Total         | Day Höhenmeter Total | Höhenmeter Total    | all Energy      | Day Speed avg  | Startcounter             |
 | P3   | Value | Tour Steigung Max             | Day Steigung Max     | Tour Steigung Min   | Tour Energy     | Tour Speed avg | Soc_State (%)            |
@@ -124,6 +132,8 @@ ohne CRC: `$FLC,5,826,55,1386,31,33155403;CRLF`
 
 mit CRC: `$FLC,5,826,55,1386,31,33155403*48CRLF`
 
+  |          |                          |
+  | -------- | ------------------------ |
   | 5        | 5.Satz                   |
   | 826      | Startcounter             |
   | 55       | Soc_State (%)            |
@@ -136,6 +146,7 @@ Datensatz FLV
 (FL->App; auf Anfrage)
 
 | $FLV |                      |
+| ---- | -------------------- |
 | P1   | Firmware Forumslader |
 | P2   | Firmware BT Modul    |
 
@@ -150,6 +161,7 @@ Datensatz FLP
 (FL->App; auf Anfrage)
 
 | $FLP | return values to App for verification |
+| ---- | ------------------------------------- |
 | P1   | Wheelsize in Millimeter               |
 | P2   | Poles                                 |
 | P3   | Altitude Offset in 1/10 Meter         |
@@ -171,6 +183,7 @@ Datensatz FLT
 (App->FL)
 
 | $FLT | P1     | P2        | P3      | Description                          |
+| ---- | ------ | --------- | ------- | ------------------------------------ |
 |      | ~~1~~  | ~~crc~~   |         | ~~FL Display Menü~~                  |
 |      | 2      |           |         | Verbraucher Ein/Aus ~~FL Display +~~ |
 |      | ~~3~~  |           |         | ~~FL Display -~~                     |
