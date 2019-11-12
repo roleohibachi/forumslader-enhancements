@@ -16,7 +16,7 @@ Upgrades to forumslader controller
 - Environmental Sensing Service (ESS) GATT profile, for pressure and temperature data?
 - May be used to power (and control?) Electronic shifting project
 - upgrade to marine grade cables & connectors
-- Locus companion app for CSCS data ([API](locus API info:https://github.com/asamm/locus-api/wiki/First-steps))
+- Locus companion app for CSCS data ([locus API info](https://github.com/asamm/locus-api/wiki/First-steps))
 
 # BT Serial protocol info
 - uses bluetooth uart protocol
