@@ -16,6 +16,8 @@ Upgrades to forumslader controller
 - upgrade to marine grade cables & connectors
 
 ## BLE GATT profiles
+- [All services](https://www.bluetooth.com/specifications/gatt/services/)
+- [All characteristics](https://www.bluetooth.com/specifications/gatt/characteristics/)
 - [all UUIDs](https://gist.github.com/sam016/4abe921b5a9ee27f67b3686910293026)
 - Appearance characteristic: "Cycling: Speed Sensor" key="1154"
 - Battery, to report battery level via native android/ios implementation.
@@ -24,8 +26,8 @@ Upgrades to forumslader controller
   - Battery power state (chargeable or not; charging or discharging)
   - Battery level state, a wrapper for the other two
   - [demo](https://circuitdigest.com/microcontroller-projects/esp32-ble-server-how-to-use-gatt-services-for-battery-level-indication) alongside serial comms
-- Cycling Speed and Cadence characteristic, to allow Strava, etc to receive high quality speed data
-- Environmental Sensing Service (ESS) characteristic, for pressure and temperature data, because why not
+- Cycling Speed and Cadence service; or just speed characteristic, to allow Strava, etc to receive high quality speed data
+- Environmental Sensing Service (ESS); or just temp and pressure characteristics; because why not! We have the sensors already
 - Locus companion app for CSCS data ([locus API info](https://github.com/asamm/locus-api/wiki/First-steps))
 
 # BT Serial protocol info
