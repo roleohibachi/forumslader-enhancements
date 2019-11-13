@@ -15,7 +15,8 @@ Upgrades to forumslader controller
 - May be used to power (and control?) Electronic shifting project
 - upgrade to marine grade cables & connectors
 
-## BLE GATT profiles
+## BLE GATT
+- [Primer](https://www.oreilly.com/library/view/getting-started-with/9781491900550/ch04.html)
 - [All services](https://www.bluetooth.com/specifications/gatt/services/)
 - [All characteristics](https://www.bluetooth.com/specifications/gatt/characteristics/)
 - [all UUIDs](https://gist.github.com/sam016/4abe921b5a9ee27f67b3686910293026)
