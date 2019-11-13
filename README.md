@@ -38,7 +38,7 @@ Upgrades to forumslader controller
 - other gatt protocols that could be useful:
   - BAS	Battery Service (provides single 0-100% data point)
   - CSCS	Cycling Speed and Cadence Service (exposes speed data from sensor)
-  - ESS	Environmental Sensing Service (exposes pressure/temp data)
+  - ESS	Environmental Sensing Service (exposes pressure/temp data) [demo](https://www.hackster.io/ManniAT/esp32-ble-environmental-gatt-server-14cceb)
 
 According to Sven:
 > - we use the BT Modul HM-10 (cc2540/cc2541 chip) with the standard firmware (we have no own firmware)
