@@ -14,6 +14,8 @@ Upgrades to forumslader controller
 ## Misc
 - May be used to power (and control?) Electronic shifting project
 - upgrade to marine grade cables & connectors
+- 3g modem, LoRa radio, or APRS radio
+- GPS
 
 ## BLE GATT
 - [Primer](https://www.oreilly.com/library/view/getting-started-with/9781491900550/ch04.html)
