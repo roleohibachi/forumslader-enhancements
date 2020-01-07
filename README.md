@@ -52,3 +52,6 @@ According to Sven:
 > - the BT modul only transmit / receive datas from the smartphone
 > 
 > I found my [code](Forumslader_ESP32_BLE_UART.ino) approach for Espressif's ESP32 module to emulate the HM-10. I tested it a year ago and it worked. I hope that simplifies the implementation for you.
+
+# 6 Jan 2020
+Opened up the case. Looks like it survived the last 2000 miles of weather and vibration just fine. Clipped of the old bluetooth module, stripped the connector wires... and found out my soldering iron isn't working. Putting this on pause. When I come back, next step will be to write a library for parsing the serial data (once I can solder the leads to an arduino-or-something).
