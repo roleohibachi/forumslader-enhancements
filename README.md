@@ -57,4 +57,4 @@ According to Sven:
 Opened up the case. Looks like it survived the last 2000 miles of weather and vibration just fine. Clipped of the old bluetooth module, stripped the connector wires... and found out my soldering iron isn't working. Putting this on pause. When I come back, next step will be to write a library for parsing the serial data (once I can solder the leads to an arduino-or-something).
 
 # 7 Jan 2020
-Fixed soldering iron (bad power cable). Soldered leads. Need pinout from FS.
+Fixed soldering iron (bad power cable). Soldered leads. BT pinout corresponds to [this](https://components101.com/sites/default/files/component_pin/HM10-Pinout.png), mounted with the antenna toward the FS. Be careful, I think I got a twist in the wires or possibly put black to power and red to ground or something. Just verify the pins carefully. Be aware it's a 3.3v VCC. I/O with arduino via USB will require a level shifter (ordered 1/8, delivery expected 1/11)
