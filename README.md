@@ -58,3 +58,6 @@ Opened up the case. Looks like it survived the last 2000 miles of weather and vi
 
 # 7 Jan 2020
 Fixed soldering iron (bad power cable). Soldered leads. BT pinout corresponds to [this](https://components101.com/sites/default/files/component_pin/HM10-Pinout.png), mounted with the antenna toward the FS. Be careful, I think I got a twist in the wires or possibly put black to power and red to ground or something. Just verify the pins carefully. Be aware it's a 3.3v VCC. I/O with arduino via USB will require a level shifter (ordered 1/8, delivery expected 1/11)
+
+# 25 Jan 2020 or so
+Connected level shifter, works great. Using arduino nano (5v from usb) on the HV side, 3.3v from FS on the LV side. SoftwareSerial works to receive data at 57600 baud. Haven't tried sending yet. Next step: use Serial techniques from weather station build to make a parsing library.
