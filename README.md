@@ -61,3 +61,6 @@ Fixed soldering iron (bad power cable). Soldered leads. BT pinout corresponds to
 
 # 25 Jan 2020 or so
 Connected level shifter, works great. Using arduino nano (5v from usb) on the HV side, 3.3v from FS on the LV side. SoftwareSerial works to receive data at 57600 baud. Haven't tried sending yet. Next step: use Serial techniques from weather station build to make a parsing library.
+
+# 11 Jan 2021
+Somebody did this for the peloton! https://ihaque.org/posts/2021/01/04/pelomon-part-iv-software/
